@@ -1,0 +1,65 @@
+<%- include('partials/_header.ejs')-%>
+
+<body>
+
+  <!-- Navigation -->
+  <%- include('partials/_navigation.ejs')-%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Man must explore, and this is exploration at its greatest</h1>
+            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+
+          <h2 class="section-heading"><%= content.title%></h2>
+
+          <p><%= content.description%></p>
+
+          
+
+          
+
+          <p><%=content.id%></p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="tm-bg-gray tm-share-box">
+    <div class="text-center">
+      <a href="/contents/edit/<%=content._id%>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
+    </div>	
+    <div class="text-center">
+      <!--bu seferde hrefe ekledik bu kodu-->
+      <a href="/contents/<%=content._id%>?_method=DELETE" class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download" 
+        
+        onclick="return confirm('ARE YOU SURE?')"><span>Delete Data</span></a>	
+    </div>								
+  </div>
+
+  <hr>
+
+  <%- include('partials/_footer.ejs')-%>
+
+</body>
+
+</html>

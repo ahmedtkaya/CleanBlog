@@ -3,6 +3,7 @@ const Content = require('../models/Content.js');
 exports.getAllContent = async (req, res) => {
   const content = await Content.find({});
   res.render('index', { content });
+  //deneme
 };
 exports.getContent = async (req, res) => {
   //console.log(req.params.id);
